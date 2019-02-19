@@ -8,12 +8,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static org.junit.Assert.assertTrue;
-import java.util.concurrent.TimeUnit;
 
 public class Basket {
 
@@ -34,14 +32,8 @@ public class Basket {
 
     @Given("^that i am on the shopping website$")
     public void that_i_am_on_the_shopping_website() throws Throwable {
-//        driver = new ChromeDriver();
-//        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-//        driver.get("https://www.edgewordstraining.co.uk/demo-site/");
-//        driver.manage().window().maximize();
 
         driver = ChromeDriverUtils.openChromeBrowser("https://www.edgewordstraining.co.uk/demo-site/");
-
-//
     }
 
     @When("^i add an item to the basket$")
