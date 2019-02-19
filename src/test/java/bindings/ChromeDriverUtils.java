@@ -3,13 +3,12 @@ package bindings;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 public class ChromeDriverUtils {
+
     private static String getChromeDriverPath() {
 
         String osName = System.getProperty("os.name").toLowerCase();
@@ -19,7 +18,7 @@ public class ChromeDriverUtils {
         if (osName.contains("mac")) {
             return "/resources/drivers/mac/chromedriver";
         }
-        return "/opt/chromedriver/chromedriver";
+        return "/resources/drivers/linux/chromedriver";
     }
 
     private static void setExecutableMode(String path) {
@@ -32,8 +31,7 @@ public class ChromeDriverUtils {
     public static WebDriver openChromeBrowser(String baseURL) {
         WebDriver driver = null;
         try {
-            //String chromeDriverPath = System.getProperty("user.dir") + getChromeDriverPath();
-            String chromeDriverPath = getChromeDriverPath();
+            String chromeDriverPath = System.getProperty("user.dir") + getChromeDriverPath();
             setExecutableMode(chromeDriverPath);
             System.out.println("---- Opening chrome browser");
             System.setProperty("webdriver.chrome.driver", chromeDriverPath);

@@ -45,21 +45,21 @@ formatter.match({
   "location": "Basket.that_i_am_on_the_shopping_website()"
 });
 formatter.result({
-  "duration": 7101076137,
+  "duration": 38583369725,
   "status": "passed"
 });
 formatter.match({
   "location": "Basket.i_add_an_item_to_the_basket()"
 });
 formatter.result({
-  "duration": 4539229563,
+  "duration": 5057319147,
   "status": "passed"
 });
 formatter.match({
   "location": "Basket.i_can_view_the_item_in_my_basket()"
 });
 formatter.result({
-  "duration": 5818406310,
+  "duration": 6099618274,
   "status": "passed"
 });
 });

@@ -1,6 +1,5 @@
 package bindings;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -14,18 +13,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import static org.junit.Assert.assertTrue;
 
 public class Basket {
-
-    private static String getChromeDriverPath() {
-        String osName =  System.getProperty("os.name").toLowerCase();
-        if (osName.contains("win")) {
-            return "/resources/drivers/windows/chromedriver.exe";
-        }
-        if (osName.contains("mac")){
-            return "/resources/drivers/mac/chromedriver";
-        }
-        return "/resources/drivers/linux/chromedriver";
-    }
-
 
     WebDriver driver;
 
